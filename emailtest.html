@@ -1,0 +1,25 @@
+<html>
+<body>
+<input type="text" id="mail" >
+<button onclick="checkmail()">check</button>
+<p id="demo"></p>
+
+ <script>
+function checkmail(){
+    var mail=document.getElementById("mail").value;
+var pattern=/^([a-z])+([0-9])*([\.]?[a-z0-9]+)*\S\@[a-z]+([\.]?[a-z0-9]+)*(\.[a-z]{2,3})+$/g;
+var res=pattern.test(mail);
+if(res)
+document.getElementById("demo").innerHTML="your mail id is "+mail;
+else
+document.getElementById("demo").innerHTML="Invalid mail id ";
+
+
+}
+    </script>
+
+
+
+
+</body>
+</html>
